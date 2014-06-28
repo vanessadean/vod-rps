@@ -4,11 +4,15 @@ class RPSGame
   def initialize(move)
     @move = move.to_sym
     @computer = [:rock, :paper, :scissors].sample
-    raise PlayTypeError unless self.class.valid_play?(@move) 
+    raise PlayTypeError unless self.class.valid_play?(@move)
   end
 
   def self.valid_play?(move)
-    [:rock, :paper, :scissors].include?(move)
+    [:rock, :paper, :scissors, :dynamite].include?(move)
+  end
+
+  def dynamite?
+    @move == :dynamite
   end
 
   def computer_play
