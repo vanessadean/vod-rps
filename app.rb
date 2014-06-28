@@ -1,13 +1,9 @@
 require_relative 'config/environment'
-require 'pry'
 
 class GameApp < Sinatra::Base
   get '/rps/:play' do
     begin
     game = RPSGame.new(params[:play])
-    rescue PlayTypeError
-      @result = "Invalid move!"
-    end
     @your_move = params[:play]
     @computer_move = game.computer_play
 
@@ -17,6 +13,10 @@ class GameApp < Sinatra::Base
       @result = "<p style='color:#d9534f'>You lost.</style>"
     elsif game.tied?
       @result = "You tied."
+    end
+
+    rescue PlayTypeError
+      @result = "Invalid move!"
     end
 
     erb :rps_game
