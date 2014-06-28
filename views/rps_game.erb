@@ -1,5 +1,31 @@
-<h1>WELCOME TO ROCK PAPER SCISSORS</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock! Paper! Scissors!</title>
+<head>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
 
-<h2>Your move was: <%= @your_move %></h2>
-<h2>The computer's move was: <%= @computer_move %></h2>
-<h2><%= @result %></h2> 
+<body>
+  <div class="container">
+    <h1>Rock! Paper! Scissors!</h1>
+    <br />
+    <h4>Your move was: <%= @your_move %></h4>
+    <h4>The computer's move was: <%= @computer_move %></h4>
+    <br />
+    <h3><%= @result %></h3> 
+    <br />
+    <h4>Play again?</h4>
+    <p><form action="/rps/rock" method="get">
+    <input type="submit" value="rock" class="btn btn-large btn-primary">
+    </form></p>
+
+    <p><form action="/rps/paper" method="get">
+    <input type="submit" value="paper" class="btn btn-large btn-primary">
+    </form></p>
+
+    <p><form action="/rps/scissors" method="get">
+    <input type="submit" value="scissors" class="btn btn-large btn-primary">
+    </form></p>
+  </div>
+</body>

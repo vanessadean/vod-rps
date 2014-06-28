@@ -12,11 +12,11 @@ class GameApp < Sinatra::Base
     @computer_move = game.computer_play
 
     if game.won?
-      @result = "You won!"
+      @result = "<p style='color:#5cb85c'>You won!</style>"
     elsif game.lost?
-      @result = "You lost!"
+      @result = "<p style='color:#d9534f'>You lost.</style>"
     elsif game.tied?
-      @result = "You tied!"
+      @result = "You tied."
     end
 
     erb :rps_game
