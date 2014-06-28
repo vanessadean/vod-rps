@@ -1,6 +1,6 @@
 require 'sinatra'
-require './app'
 require 'thin'
+require './app'
 
 run GameApp
 
