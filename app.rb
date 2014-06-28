@@ -1,6 +1,10 @@
 require_relative 'config/environment'
 
 class GameApp < Sinatra::Base
+  get '/' do
+    redirect '/rps/rock'
+  end
+
   get '/rps/:play' do
     begin
       game = RPSGame.new(params[:play])
