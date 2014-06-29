@@ -28,7 +28,7 @@ class GameApp < Sinatra::Base
   end
 
   get '/boom' do
-    "<head><style>body {
+    "<head><meta name='viewport' content='width=device-width, initial-scale=1'><link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'><style>body {
             background: url(\"http://cdn29.elitedaily.com/wp-content/uploads/2014/06/wikia11.gif\");
             background-size: cover;
             background-repeat: repeat-n;
