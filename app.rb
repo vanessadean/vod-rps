@@ -28,8 +28,7 @@ class GameApp < Sinatra::Base
   end
 
   get '/boom' do
-    "<head><meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0'>
-  <script src='https://raw.github.com/wilto/iOS-orientationchange-fix.js'></script><link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'><style>body {
+    "<head><meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0'><link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'><style>body {
             background: url(\"http://cdn29.elitedaily.com/wp-content/uploads/2014/06/wikia11.gif\");
             background-size: cover;
             background-repeat: repeat-n;
