@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rock! Paper! Scissors!</title>
+    <title>Rock! Paper! Scissors! Dynamite!</title>
   </head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheets/style.css">
 </head>
 
 <body>
   <div class="container-fluid">
-    <h1>Rock! Paper! Scissors!</h1>
-    <br />
+    <h1>Rock! Paper! Scissors! Dynamite!</h1>
     <h4>Your move was: <%= @your_move %></h4>
     <h4>The computer's move was: <%= @computer_move %></h4>
-    <br />
     <h3><%= @result %></h3> 
-    <br />
     <h4>Play again?</h4>
-    <p><form action="/rps/rock" method="get">
+
+    <form action="/rps/rock" method="get">
     <input type="submit" value="rock" class="btn btn-large btn-primary">
-    </form></p>
+    </form>
 
-    <p><form action="/rps/paper" method="get">
+    <form action="/rps/paper" method="get">
     <input type="submit" value="paper" class="btn btn-large btn-primary">
-    </form></p>
+    </form>
 
-    <p><form action="/rps/scissors" method="get">
+    <form action="/rps/scissors" method="get">
     <input type="submit" value="scissors" class="btn btn-large btn-primary">
-    </form></p>
+    </form>
+
+    <div class="dynamite">
+      <form action="/rps/dynamite" method="get">
+      <input type="submit" value="dynamite" style="background-color: white; border: 0px">
+      </form>
+    </div>
   </div>
 </body>
