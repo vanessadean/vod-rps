@@ -1,5 +1,3 @@
-require_relative 'config/environment'
-
 class GameApp < Sinatra::Base
   get '/' do
     redirect '/rps/rock'

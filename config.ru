@@ -1,6 +1,4 @@
-require 'sinatra'
-require 'thin'
-require './app'
+require './config/environment'
 
 run GameApp
 
