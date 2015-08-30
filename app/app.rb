@@ -26,11 +26,11 @@ class GameApp < Sinatra::Base
   end
 
   get '/boom' do
+    gif = ['http://i.giphy.com/Ylm2VS0fB9jDq.gif','http://i.giphy.com/IE1hr4AcZn9pS.gif','http://i.giphy.com/rKTH5ov06VfH2.gif','http://i.giphy.com/FFuJMaDOb8SxW.gif','http://i.giphy.com/KpP3MLwPMhqgw.gif'].sample
     "<head><meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0'><link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'><style>body {
-            background: url(\"http://cdn29.elitedaily.com/wp-content/uploads/2014/06/wikia11.gif\");
+            background: url(#{gif});
             background-size: cover;
             background-repeat: repeat-n;
         }</style></head>"
   end
-
 end
